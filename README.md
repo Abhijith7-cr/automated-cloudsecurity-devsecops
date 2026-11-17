@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+Local README content
+=======
+GitHub README content
+>>>>>>> main
 # Automated Cloud Security & DevSecOps Vulnerability Pipeline
 
 ## Project Overview
