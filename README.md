@@ -34,3 +34,7 @@ Docker containers, and cloud infrastructure.
 5. Detect cloud infrastructure misconfigurations.
 6. Implement automated security gates.
 7. Generate vulnerability reports.
+=======
+# automated-cloudsecurity-devsecops
+Automated Cloud Security and DevSecOps Vulnerability Scanning Pipeline
+>>>>>>> 162b399c3b06091d76a02038418f148794f35c13
