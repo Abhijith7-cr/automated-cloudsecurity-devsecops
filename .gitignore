@@ -1,3 +1,5 @@
+# Security scan reports
+security/reports/*.json
 # Python
 __pycache__/
 *.pyc
