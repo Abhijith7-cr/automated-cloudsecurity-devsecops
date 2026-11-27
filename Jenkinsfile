@@ -67,6 +67,7 @@ pipeline {
             steps {
                sh '''
                    docker version
+		   echo "BUILD_NUMBER=$BUILD_NUMBER"
                    docker build -t cloudsecurity-app:${BUILD_NUMBER} .
                    docker images cloudsecurity-app
                 '''
