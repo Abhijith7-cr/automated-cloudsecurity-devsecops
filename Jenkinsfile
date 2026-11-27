@@ -5,6 +5,10 @@ pipeline {
     options {
         timestamps()
     }
+    environment {
+        PATH = "/var/lib/jenkins/bin:${env.PATH}"
+        DOCKER_HOST = "unix:///run/user/119/docker.sock"
+    }
 
     stages {
         stage('Checkout') {
@@ -59,8 +63,16 @@ pipeline {
                 '''
             }
         }
+        stage('Docker Build') {
+            steps {
+               sh '''
+                   docker version
+                   docker build -t cloudsecurity-app:${BUILD_NUMBER} .
+                   docker images cloudsecurity-app
+                '''
+            }
+	}
     }
-
     post {
         always {
             archiveArtifacts artifacts: 'security/reports/*.json',
